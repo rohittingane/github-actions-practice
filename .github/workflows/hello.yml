@@ -24,8 +24,6 @@ jobs:
       - name: print runner OS
         run: echo "Runner OS is ${{ runner.os }}"
 
-      - name: this step will fail
-        run: exit 1
 
 
         
