@@ -3,26 +3,23 @@ name: Hello Workflow
 on: push
 
 jobs:
-    greet:
-        runs-on: ubuntu-latest
-        steps:
-            - name: checkout code
-              uses: actions/checkout@v4
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
 
-            - name: print greeting
-              run: echo "Hello from github action"
+      - name: print greeting
+        run: echo "Hello from github action"
 
-            - name: print current date and time
-              run: date
+      - name: print current date and time
+        run: date
 
+      - name: print branch name
+        run: echo "This run was triggered from branch ${{ github.ref_name }}"
+
+      - name: list files in repo
+        run: ls -la
         
-             - name: print branch name
-               run: echo "This run was triggered from branch ${{ github.ref_name }}"
-
-            - name: list files in repo
-              run: ls -la
-
-             - name: print runner OS
-               run: echo "Runner OS is ${{ runner.os }}"
-                        
-
+      - name: print runner OS
+        run: echo "Runner OS is ${{ runner.os }}"
