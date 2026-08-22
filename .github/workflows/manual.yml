@@ -21,4 +21,4 @@ jobs:
 
       - name: print environment input
         run: echo "Deploying to environment: ${{ github.event.inputs.environment }}"
-        k
+    
