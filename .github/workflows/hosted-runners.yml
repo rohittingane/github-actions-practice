@@ -1,4 +1,4 @@
-nname: Hosted Runners Demo
+name: Hosted Runners Demo
 
 on: push
 
@@ -40,4 +40,3 @@ jobs:
           echo "OS: macOS Latest"
           echo "Hostname: $(hostname)"
           echo "User: $(whoami)"
-          
