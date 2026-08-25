@@ -1,4 +1,4 @@
-name: Hosted Runners Demo
+nname: Hosted Runners Demo
 
 on: push
 
@@ -11,6 +11,17 @@ jobs:
           echo "OS: Ubuntu Latest"
           echo "Hostname: $(hostname)"
           echo "User: $(whoami)"
+
+      - name: Check pre-installed tools
+        run: |
+          echo "Docker version:"
+          docker --version
+          echo "Python version:"
+          python3 --version
+          echo "Node version:"
+          node --version
+          echo "Git version:"
+          git --version
 
   windows-job:
     runs-on: windows-latest
