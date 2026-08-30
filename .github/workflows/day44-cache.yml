@@ -8,10 +8,9 @@ jobs:
         steps:
             - uses: actions/checkout@v4
 
-            - uses: actions/cache@v4
+            - uses: actions/setup-python@v5
               with:
-                  path: ~/.cache/pip
-                  key: pip-cache
+                  python-version: "3.11"
+                  cache: "pip"
 
             - run: pip install requests
-# testing cache hit
