@@ -10,4 +10,5 @@ jobs:
             - name: Run fake tests
               run: |
                   echo "Running tests..."
-                  echo "All tests passed!"
+                  echo "Simulating a test failure!"
+                  exit 1
