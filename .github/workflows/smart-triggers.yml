@@ -1,0 +1,19 @@
+name: Smart Triggers
+
+on:
+    push:
+        branches:
+            - main
+            - "release/*"
+        paths:
+            - "src/**"
+            - "app/**"
+
+jobs:
+    notify-src-change:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Show trigger info
+              run: |
+                  echo "Triggered on branch: ${{ github.ref_name }}"
+                  echo "This ran because src/ or app/ changed"
