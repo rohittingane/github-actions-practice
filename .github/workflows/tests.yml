@@ -1,0 +1,13 @@
+name: Run Tests
+
+on:
+    push:
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Run fake tests
+              run: |
+                  echo "Running tests..."
+                  echo "All tests passed!"
