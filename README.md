@@ -7,3 +7,8 @@ This repo contains my 90DaysOfDevOps GitHub Actions practice, including a comple
 Docker Hub image: [rtingane2611/day-45-docker-cicd](https://hub.docker.com/r/rtingane2611/day-45-docker-cicd)
 
 Testing PR lifecycle trigger
+
+echo "test docs change" >> README.md
+git add .
+git commit -m "docs: update readme"
+git push origin main
